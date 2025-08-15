@@ -10,6 +10,38 @@
 
 Version 0.5.0 introduces a significant refactor, deeply integrating **Pydantic V2** for robust request payload construction and response parsing/validation across all core API interactions. This enhances data integrity, provides clear data contracts, and improves the developer experience.
 
+## Quick Start for Beginners
+
+If you're new to Python or trading APIs, follow these steps to try the library quickly:
+
+1. **Install prerequisites** – ensure you have [Python 3.8+](https://www.python.org/downloads/) and [Git](https://git-scm.com/downloads).
+2. **Clone the project**
+   ```bash
+   git clone https://github.com/your-user/tsxapipy.git
+   cd tsxapipy
+   ```
+3. **Create a virtual environment**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Windows: .\.venv\Scripts\activate
+   ```
+4. **Install packages**
+   ```bash
+   pip install -r requirements.txt
+   pip install -e .
+   ```
+5. **Configure credentials**
+   ```bash
+   cp .env.example .env
+   ```
+   Open `.env` and add your `API_KEY` and `USERNAME`.
+6. **Run a sample script**
+   ```bash
+   python examples/01_authenticate_and_get_accounts.py
+   ```
+
+You should see a list of your accounts. With this basic setup you can explore historical data, stream market events, or place test orders.
+
 ## Core Features
 
 *   **Pydantic-Driven API Client (`tsxapipy.api.client.APIClient`):**
